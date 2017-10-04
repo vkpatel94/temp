@@ -1,2 +1,2 @@
-# MyHousing
-Mean Stack Property Portal on mean js
+# PropertyPortal
+Property Listing portal
