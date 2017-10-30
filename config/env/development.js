@@ -60,12 +60,12 @@ module.exports = {
     sandbox: true
   },
   mailer: {
-    from: process.env.MAILER_FROM || 'My Housing',
+    from: process.env.MAILER_FROM || 'MyHousing',
     options: {
-      service: process.env.MAILER_SERVICE_PROVIDER || 'gmail',
+      service: process.env.MAILER_SERVICE_PROVIDER || 'mail.findways.in',
       auth: {
-        user: process.env.MAILER_EMAIL_ID || 'tempualbanyse@gmail.com',
-        pass: process.env.MAILER_PASSWORD || 'tempualbanyse8'
+        user: process.env.MAILER_EMAIL_ID || 'rushabh@findways.in',
+        pass: process.env.MAILER_PASSWORD || 'Rushi*1929'
       }
     }
   },

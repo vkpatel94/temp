@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Listingproperties</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="listingproperty in vm.listingproperties"
+       ui-sref="listingproperties.view({ listingpropertyId: listingproperty._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="listingproperty.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="listingproperty.user" ng-bind="listingproperty.user.displayName"></span>
+        <span ng-if="!listingproperty.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="listingproperty.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.listingproperties.$resolved && !vm.listingproperties.length">
+    No Listingproperties yet, why don't you <a ui-sref="listingproperties.create">create one</a>?
+  </div>
+</section>
