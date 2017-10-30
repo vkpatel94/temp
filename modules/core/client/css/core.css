@@ -48,3 +48,13 @@ a:hover .header-profile-image {
 section.container.home {
 	width: 100%;
 }
+
+.logo_size{
+	width: 100%;
+	max-width: 178px;
+
+}
+
+.logo_position{
+	padding-top: 0px;
+}
