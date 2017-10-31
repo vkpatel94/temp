@@ -18,13 +18,13 @@
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'listingproperties', {
-      title: 'List Listingproperties',
+      title: 'View Properties',
       state: 'listingproperties.list'
     });
 
     // Add the dropdown create item
     menuService.addSubMenuItem('topbar', 'listingproperties', {
-      title: 'Create Listingproperty',
+      title: 'Add Properties',
       state: 'listingproperties.create',
       roles: ['user']
     });

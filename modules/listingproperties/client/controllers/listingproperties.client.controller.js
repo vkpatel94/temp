@@ -6,9 +6,9 @@
     .module('listingproperties')
     .controller('ListingpropertiesController', ListingpropertiesController);
 
-  ListingpropertiesController.$inject = ['$scope', '$state', '$window', 'Authentication', 'listingpropertyResolve'];
+  ListingpropertiesController.$inject = ['$scope', '$state', '$window', 'Authentication', 'listingpropertyResolve', 'Notification'];
 
-  function ListingpropertiesController ($scope, $state, $window, Authentication, listingproperty) {
+  function ListingpropertiesController($scope, $state, $window, Authentication, listingproperty, Notification) {
     var vm = this;
 
     vm.authentication = Authentication;
@@ -29,6 +29,7 @@
     function save(isValid) {
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'vm.form.listingpropertyForm');
+        console.log('test');
         return false;
       }
 
@@ -40,9 +41,13 @@
       }
 
       function successCallback(res) {
-        $state.go('listingproperties.view', {
+        $state.go('listingproperties.list', {
           listingpropertyId: res._id
         });
+        Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Property saved successfully!' });
+
+        console.log(res);
+
       }
 
       function errorCallback(res) {

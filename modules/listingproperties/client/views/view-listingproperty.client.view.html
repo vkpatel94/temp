@@ -21,6 +21,12 @@
             ng-bind="vm.listingproperty.user.displayName"></span>
       <span ng-if="!vm.listingproperty.user">Deleted User</span>
     </em>
-  </small>
-  <p class="lead" ng-bind="vm.listingproperty.content"></p>
+  </small><br>
+  <label></label><span class="lead" ng-bind="vm.listingproperty.address"></span><br />
+  <label>Property Description: </label><p class="lead" ng-bind="vm.listingproperty.propertydescription"></p>
+  <label>Price: </label><span class="lead" ng-bind="vm.listingproperty.price"></span><br />
+  <label>No of bedrooms: </label><span ng-bind="vm.listingproperty.noofbedroom" ></span><br />
+  <label>city: </label><span ng-bind="vm.listingproperty.city" ></span><br />
+  <label>unit #: </label><span ng-bind="vm.listingproperty.unit" ></span><br />
+  <label></label>
 </section>

@@ -22,11 +22,36 @@ var ListingpropertySchema = new Schema({
     required: 'Please fill property address',
     trim: true
   },
+  city: {
+    type: String,
+    default: '',
+    trim: true
+  },
   unit: {
     type: String,
     default: '',
     required: 'Please fill property unit',
     trim: true
+  },
+  propertyImageURL: {
+    type: String,
+    default: 'modules/users/client/img/profile/default.png'
+  },
+  noofbedroom: {
+    type: Number,
+    default: '',
+    required: 'Please enter number of bedrooms',
+    trim: true
+  },
+  propertydescription: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  price: {
+    type: Number,
+    default: '',
+    required: 'Please enter prices'
   },
   created: {
     type: Date,

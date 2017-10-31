@@ -16,11 +16,11 @@ module.exports = {
       js: [
         // bower:js
         'public/lib/angular/angular.js',
-        'public/lib/jquey/dist/jquery.min.js',
+        'modules/core/client/app/jquery.2.0.2.min.js',
+        'public/lib/jquery/dist/jquery.min.js',
         'public/lib/angular-animate/angular-animate.js',
         'public/lib/bootstrap/dist/js/bootstrap.min.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-        'modules/core/client/app/jquery.2.0.2.min.js',
         'public/lib/ng-file-upload/ng-file-upload.js',
         'modules/users/client/ng-file-upload/angular-file-upload.min.js',
         'public/lib/angular-messages/angular-messages.js',

@@ -17,7 +17,7 @@
       vm.users = data;
       vm.buildPager();
     });
-
+    console.log(vm.users);
     function buildPager() {
       vm.pagedItems = [];
       vm.itemsPerPage = 15;
@@ -29,6 +29,7 @@
       vm.filteredItems = $filter('filter')(vm.users, {
         $: vm.search
       });
+      console.log(vm.filteredItems);
       vm.filterLength = vm.filteredItems.length;
       var begin = ((vm.currentPage - 1) * vm.itemsPerPage);
       var end = begin + vm.itemsPerPage;

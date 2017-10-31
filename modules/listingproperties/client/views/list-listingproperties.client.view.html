@@ -1,22 +1,47 @@
 <section>
   <div class="page-header">
-    <h1>Listingproperties</h1>
+      <div class="row">
+          <div class="col-md-4">  <h1>Listingproperties</h1></div>
+    <div class="col-md-4" style="margin-top: 2em">
+       <input class="form-control col-md-4" type="text" ng-model="vm.search" placeholder="Search" ng-change="vm.figureOutItemsToDisplay()" />
   </div>
+    <div class="col-md-4"></div>
+</div>
+
+<!-- <div class="list-group">
+  <a ng-repeat="user in vm.pagedItems" ui-sref="admin.user({userId: user._id})" class="list-group-item">
+    <h4 class="list-group-item-heading" ng-bind="user.username"></h4>
+    <p class="list-group-item-text pull-right small" ng-bind="user.roles"></p>
+    <p class="list-group-item-text" ng-bind="user.email"></p>
+  </a>
+</div> -->
+
+
   <div class="list-group">
-    <a ng-repeat="listingproperty in vm.listingproperties"
+    <a ng-repeat="listingproperty in vm.pagedItems"
        ui-sref="listingproperties.view({ listingpropertyId: listingproperty._id })"
        class="list-group-item">
-      <small class="list-group-item-text">
+      <!-- <small class="list-group-item-text">
         Posted on
         <span ng-bind="listingproperty.created | date:'mediumDate'"></span>
         by
         <span ng-if="listingproperty.user" ng-bind="listingproperty.user.displayName"></span>
         <span ng-if="!listingproperty.user">Deleted User</span>
-      </small>
+      </small> -->
       <h4 class="list-group-item-heading" ng-bind="listingproperty.name"></h4>
+      <h4 class="list-group-item-text" ng-bind="listingproperty.address"></h4>
+      <h4 class="list-group-item-text" ng-bind="listingproperty.price"></h4>
+      <h4 class="list-group-item-text" ng-bind="listingproperty.unit"></h4>
+      <h4 class="list-group-item-text" ng-bind="listingproperty.noofbedroom"></h4>
+      <!-- <h2>{{listingproperty.address}}</h2>
+      <h2>{{listingproperty.price}}</h2>
+      <h2>{{listingproperty.unit}}</h2>
+      <h2>{{listingproperty.noofbedroom}}</h2> -->
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.listingproperties.$resolved && !vm.listingproperties.length">
     No Listingproperties yet, why don't you <a ui-sref="listingproperties.create">create one</a>?
   </div>
+  </div>
+  <uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
 </section>

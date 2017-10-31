@@ -14,6 +14,7 @@ var path = require('path'),
  */
 exports.create = function (req, res) {
   var listingproperty = new Listingproperty(req.body);
+  console.log(listingproperty);
   listingproperty.user = req.user;
   console.log(listingproperty.user);
   listingproperty.save(function (err) {
