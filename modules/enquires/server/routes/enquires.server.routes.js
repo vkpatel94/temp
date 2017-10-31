@@ -16,7 +16,7 @@ module.exports = function(app) {
     .get(enquires.read)
     .put(enquires.update)
     .delete(enquires.delete);
-  app.route('/api/enquires').post(enquires.sendMail);
+  app.route('/api/enquires/sendmail').post(enquires.sendMail);
   // Finish by binding the Enquire middleware
-  app.param('enquireId', enquires.enquireByID);
+ // app.param('enquireId', enquires.enquireByID);
 };

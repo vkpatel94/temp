@@ -27,7 +27,7 @@ angular.module('enquires').controller('EnquiresController', ['$scope', '$http', 
       console.log("contactName :: " + data.contactName + " contactEmail :: " + data.contactEmail + " cotnactMsg :: " + data.contactMsg);
       //console.log("Data :: " + data.contactName);
       // Simple POST request example (passing data) :
-      $http.post('/api/enquires', data).
+      $http.post('/api/enquires/sendmail', data).
       success(function(data, status, headers, config) {
         // this callback will be called asynchronously
         // when the response is available
