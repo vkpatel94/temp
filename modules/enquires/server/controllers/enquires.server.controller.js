@@ -1,6 +1,6 @@
 'use strict';
 
-var nodemailer = require('C:\\Users\\Viral-PC\\AppData\\Roaming\\npm\\node_modules\\nodemailer');
+var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   service: "Gmail",
