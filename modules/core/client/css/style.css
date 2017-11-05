@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#wrap{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#contain{
+	height: 50px;
+	background: #41484a;
+	text-align: center;
+	line-height: 30px;
+	padding-right: 50px;
+	padding-left: 0px;
+	transition: all 0.5s ease;
+	border-radius: 5px;
+	position: relative;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.input{
+	border: 0px;
+	border-bottom: 2px solid #fff;
+	background: transparent;
+	width: 0%;
+	padding: 5px 0;
+	outline: none;
+	color: #fff;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+
+/* #fas{
+	color: #ffffff;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	font-size: 22px;
+	cursor: pointer;
+} */
+.contain
+{
+	width: 0px;
+
+}
+.container.active{
+	width: 700px;
+	padding-left: 25px;
+	transition: all 0.5s ease;
+}
+
+.input.active{
+	width: 98%;
+	padding-left: 5px;
+	transition: all 0.5s 0.8s ease;
+}
+
+input::placeholder {
+	color: #fff;
+}

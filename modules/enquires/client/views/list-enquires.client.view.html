@@ -1,0 +1,26 @@
+<div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4" ng-controller="EnquiresController as vm">
+  <form role="form" name="contactForm" data-ng-submit="vm.sendMail()">
+    <div class="form-group" ng-class="{error: contactForm.contactName.$invalid}">
+      <label>Full Name</label>
+      <input class="form-control" type="text" name="contactName" ng-model="vm.contactName" required="required" placeholder="Your name">
+      <div ng-messages="vm.contactForm.contactName.$error" role="alert">
+        <p class="help-block error-text" ng-message="required">First name is required.</p>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{error: contactForm.contactEmail.$invalid}">
+      <label>Email</label>
+      <input class="form-control" type="email" name="contactEmail" ng-model="vm.contactEmail" required="required" placeholder="Your email address">
+      <div ng-messages="vm.contactForm.contactEmail.$error" role="alert">
+        <p class="help-block error-text" ng-message="required">Email is required.</p>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{error: contactForm.contactMsg.$invalid}">
+      <label>Message</label>
+      <textarea class="form-control" rows="5" name="contactMsg" ng-model="vm.contactMsg" required="required" placeholder="Your messsage"></textarea>
+      <div ng-messages="vm.contactForm.contactMsg.$error" role="alert">
+        <p class="help-block error-text" ng-message="required">Enquiry Message is required.</p>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-lg btn-block md-primary" ng-disabled="contactForm.$invalid">Send</button>
+  </form>
+</div>

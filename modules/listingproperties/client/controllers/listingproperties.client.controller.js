@@ -25,6 +25,13 @@
       }
     }
 
+
+    $http.get('api/allpackages',function(item){
+      $scope.packageType = item;
+      console.log($scope.packageType);
+    });
+
+
     // Save Listingproperty
     function save(isValid) {
       if (!isValid) {

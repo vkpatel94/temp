@@ -1,3 +1,22 @@
+<link rel="stylesheet" href="/modules/core/client/css/style.css"><!--
+<link rel="stylesheet" href="/modules/core/client/css/mycss.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<script>
+  $(document).ready(function(){
+
+    $(".fa-search").click(function(){
+      /*$(".container, .input").toggleClass("active");
+      */$('#contain').toggleClass("active");
+      $('#sbox').toggleClass("active");
+      $("input[type='text']").focus();
+    });
+
+  });
+</script>
+
 <section >
   <div class="text-center container-fluid bgimg">
     <div class="row">
@@ -5,6 +24,24 @@
         <img alt="yourhousing-background" class="img-responsive text-center"  src="/modules/core/client/img/home-background.jpg" />
       </div>
     </div>
+<!--
+    <div class="wrapper">
+      <div class="container" id="contain">
+        <input class="input" type="text" placeholder="Search" id="sbox">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+    </div>
+ -->
+
+    <!-- Search Box -->
+
+
+    <div id="wrap" class="wrapper">
+      <div class="container contain" id="contain">
+        <input class="input" type="text" ng-model="searchText" id="sbox"  placeholder="Search">
+        <i class="fa fa-search" style="color: #ffffff; position: absolute; right: 15px; top: 15px; font-size: 22px; cursor: pointer;" aria-hidden="true"></i>
+      </div>
+    </div> 
     <br>
 
   </div>

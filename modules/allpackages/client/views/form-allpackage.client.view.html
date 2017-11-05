@@ -1,0 +1,40 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.allpackage._id ? 'Edit Allpackage' : 'New Allpackage'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.allpackageForm" class="form-horizontal" ng-submit="vm.save(vm.form.allpackageForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="packageName">Package Name</label>
+          <input name="name" type="text" ng-model="vm.allpackage.packageName" id="packageName" class="form-control" placeholder="Package Name" required>
+          <div ng-messages="vm.form.allpackageForm.packageName.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Please enter Package name.</p>
+          </div>
+        </div>
+          <div class="form-group" show-errors>
+            <label class="control-label" for="packageType">Package Type</label>
+            <input name="name" type="text" ng-model="vm.allpackage.packageType" id="packageType" class="form-control" placeholder="package Type" required>
+            <div ng-messages="vm.form.allpackageForm.packageType.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Allpackage name is required.</p>
+            </div>
+          </div>
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="price">price</label>
+          <input name="name" type="number" ng-model="vm.allpackage.price" id="price" class="form-control" placeholder="price" required>
+          <div ng-messages="vm.form.allpackageForm.price.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Allpackage name is required.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.allpackage._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

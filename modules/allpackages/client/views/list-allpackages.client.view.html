@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Allpackages</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="allpackage in vm.allpackages"
+       ui-sref="allpackages.view({ allpackageId: allpackage._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="allpackage.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="allpackage.user" ng-bind="allpackage.user.displayName"></span>
+        <span ng-if="!allpackage.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="allpackage.packageName"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.allpackages.$resolved && !vm.allpackages.length">
+    No Allpackages yet, why don't you <a ui-sref="allpackages.create">create one</a>?
+  </div>
+</section>
