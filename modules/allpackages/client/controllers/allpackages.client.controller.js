@@ -44,7 +44,6 @@
           allpackageId: res._id
         });
       }
-
       function errorCallback(res) {
         vm.error = res.data.message;
       }

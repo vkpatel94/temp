@@ -53,6 +53,8 @@ var ListingpropertySchema = new Schema({
     default: '',
     required: 'Please enter prices'
   },
+  pacakgeType: {Schema.ObjectId},
+
   created: {
     type: Date,
     default: Date.now

@@ -52,7 +52,6 @@
           listingpropertyId: res._id
         });
         Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Property saved successfully!' });
-
         console.log(res);
 
       }

@@ -23,9 +23,9 @@
     .module('listingproperties')
     .controller('ListingpropertiesListController', ListingpropertiesListController);
 
-  ListingpropertiesListController.$inject = [ '$filter', 'ListingpropertiesService'];
+  ListingpropertiesListController.$inject = [ '$filter', 'ListingpropertiesService', '$http' ];
 
-  function ListingpropertiesListController($filter, ListingpropertiesService) {
+  function ListingpropertiesListController($filter, ListingpropertiesService, $http ) {
     var vm = this;
 
     vm.listingproperties = ListingpropertiesService.query();
